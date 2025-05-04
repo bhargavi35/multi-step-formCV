@@ -3,7 +3,7 @@ import { useFormContext } from '../context/FormContext';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { skillSchema } from '../utils/validationSchemas';
 import { Skill } from '../context/FormContext';
-import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
+import { DragDropContext, Droppable, Draggable, DropResult } from 'react-beautiful-dnd';
 
 const Skills: React.FC = () => {
   const { formState, setFormState, nextStep, prevStep } = useFormContext();
@@ -29,7 +29,7 @@ const Skills: React.FC = () => {
     }));
   };
 
-  const handleDragEnd = (result: any) => {
+  const handleDragEnd = (result: DropResult) => {
     if (!result.destination) return;
 
     const items = Array.from(formState.skills);

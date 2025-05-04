@@ -8,7 +8,7 @@ const Completed: React.FC = () => {
           <span className="text-orange-500">Great!</span> Thank You for Applying
         </h2>
         <p className="text-gray-600 mt-4">
-          We appreciate your application. Our team will review it, and we'll reach out soon if there's a match. Stay tuned!
+          We appreciate your application. Our team will review it, and we&apos;ll reach out soon if there&apos;s a match. Stay tuned!
         </p>
       </div>
       
